@@ -9,16 +9,7 @@ module RubyLLM
 
   extend SpeakMethod unless respond_to?(:speak)
 
-  Configuration.class_eval do
-    unless method_defined?(:default_audio_model)
-      self.class.send(:attr_accessor, :default_audio_model)
-
-      prepend(Module.new do
-        def initialize
-          super
-          self.default_audio_model = 'tts-1'
-        end
-      end)
-    end
+  unless Configuration.options.include?(:default_audio_model)
+    Configuration.send(:option, :default_audio_model, 'tts-1')
   end
 end
