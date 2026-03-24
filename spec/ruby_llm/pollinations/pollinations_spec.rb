@@ -32,7 +32,7 @@ RSpec.describe RubyLLM::Pollinations::Provider::Pollinations do
 
     describe '#api_base' do
       it 'returns default Pollinations API base URL' do
-        expect(provider.api_base).to eq('https://text.pollinations.ai')
+        expect(provider.api_base).to eq('https://gen.pollinations.ai')
       end
 
       it 'uses custom base when configured' do

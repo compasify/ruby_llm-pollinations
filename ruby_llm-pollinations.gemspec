@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'ruby_llm-pollinations'
   spec.version       = RubyLLM::Pollinations::VERSION
   spec.authors       = ['Compasify']
-  spec.email         = ['dev@compasify.com']
+  spec.email         = ['timdapan.com@gmail.com']
 
   spec.summary       = 'Pollinations AI provider for RubyLLM'
   spec.description   = 'Adds Pollinations AI support to RubyLLM — chat, image/video generation, ' \

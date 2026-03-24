@@ -6,7 +6,7 @@ RSpec.describe RubyLLM::Pollinations::Provider::Images do
   describe '.images_url' do
     it 'builds URL with encoded prompt' do
       url = described_class.images_url('a cat', model: 'flux')
-      expect(url).to start_with('prompt/a%20cat')
+      expect(url).to start_with('image/a%20cat')
     end
 
     it 'includes model in query params' do
